@@ -1,0 +1,127 @@
+@font-face{
+    font-family: "Lumier";
+    src: url("fonts/lumier-rounded.woff2") format("woff2"), url("fonts/lumier-rounded.woff") format("woff");
+}
+
+@font-face{
+    font-family: "Lumier";
+    font-weight: bold;
+    src: url("fonts/lumier-rounded-bold.woff2") format("woff2"), url("fonts/lumier-rounded-bold.woff") format("woff");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    min-height: calc(var(--vh, 1vh) * 100);
+    display: flex;
+    flex-direction: column;
+    background: #070912 url('images/background.jpg') no-repeat center -100px;
+    background-size: cover;
+    font-family: Avenir, Helvetica, sans-serif;
+}
+
+header {
+    min-height: 600px;
+    flex: 1;
+}
+
+nav {
+    padding: 25px;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav a {
+    position: relative;
+    margin: 25px;
+    width: 320px;
+    height: 60px;
+    display: block;
+    background: url('images/link.jpg') no-repeat center center;
+    background-size: cover;
+    font-family: Lumier, sans-serif;
+    font-size: 29px;
+    line-height: 64px;
+    text-align: center;
+    text-shadow: #0B112D 0 1px 3px;
+    text-transform: uppercase;
+}
+
+a i {
+    top: 25px;
+    left: 19px;
+    position: absolute;
+    width: 14px;
+    color: #3783BB;
+    font-size: 12px;
+    text-align: center;
+    text-shadow: none;
+}
+
+footer {
+    padding: 0 25px 25px;
+    text-align: center;
+    text-shadow: 0 1px 0 black;
+}
+
+footer, footer * {
+    color: rgba(255, 255, 255, 0.35);
+    font-weight: lighter;
+    transition: color .2s ease;
+}
+
+footer a:hover {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Background max */
+@media all and (min-width: 2048px) {
+    body {
+        background-size: auto;
+    }
+}
+
+/* Three wide */
+@media all and (max-width: 1530px) {
+    header {
+        min-height: 400px;
+    }
+}
+
+/* Two wide */
+@media all and (max-width: 1160px) {
+    header {
+        min-height: 300px;
+    }
+}
+
+/* One wide */
+@media all and (max-width: 790px) {
+    body {
+        background-position-y: -200px;
+    }
+
+    header {
+        min-height: 250px;
+    }
+
+    nav {
+        align-items: center;
+        flex: 1;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+}
